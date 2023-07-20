@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="THÊM SẢN PHẨM"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chọn loại sản phẩm: "
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+        <Spinner
+            android:id="@+id/spChonLoaiSanPham"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <EditText
+        android:id="@+id/edtThemTenSanPham"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập tên sản phẩm"
+        android:layout_marginTop="15dp"/>
+    <EditText
+        android:id="@+id/edtThemAnhSanPham"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập ảnh sản phẩm"
+        android:layout_marginTop="15dp"/>
+    <EditText
+    android:id="@+id/edtThemLinkAnhSanPham"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Nhập link ảnh sản phẩm"
+    android:layout_marginTop="15dp"/>
+    <EditText
+        android:id="@+id/edtThemGiaSanPham"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập giá sản phẩm"
+        android:layout_marginTop="15dp"/>
+    <EditText
+        android:id="@+id/edtThemGiamGia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập giảm giá"
+        android:layout_marginTop="15dp"/>
+    <EditText
+        android:id="@+id/edtThemSoLuongTrongKho"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập số lượng trong kho"
+        android:layout_marginTop="15dp"/>
+    <EditText
+        android:id="@+id/edtThemNgaySanXuat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập ngày sản xuất"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:id="@+id/edtThemHanSuDung"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập hạn sử dụng"
+        android:layout_marginTop="15dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="end"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp">
+        <Button
+            android:id="@+id/btnDialogHuyThemSanPham"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hủy"/>
+        <Button
+            android:id="@+id/btnDialogThemSanPham"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thêm"
+            android:layout_marginLeft="15dp"/>
+    </LinearLayout>
+
+</LinearLayout>
