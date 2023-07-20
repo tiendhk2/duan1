@@ -35,7 +35,7 @@ public class Adapter_SanPham extends RecyclerView.Adapter<Adapter_SanPham.ViewHo
         this.context = context;
         loaiSanPhamDAO = new LoaiSanPhamDAO(context);
     }
-//
+
     public void setData(List<SanPham> list) {
         this.list = list;
         notifyDataSetChanged();

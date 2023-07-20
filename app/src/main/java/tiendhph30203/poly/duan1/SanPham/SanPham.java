@@ -122,4 +122,5 @@ public class SanPham {
         this.ngaysanxuat = ngaysanxuat;
         this.hansudung = hansudung;
     }
+    //
 }

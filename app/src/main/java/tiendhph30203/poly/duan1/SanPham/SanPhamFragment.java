@@ -22,6 +22,8 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.ArrayList;
 import java.util.List;
 
+import tiendhph30203.poly.duan1.R;
+
 
 public class SanPhamFragment extends Fragment {
     private RecyclerView recycleViewSanPham;
@@ -140,7 +142,7 @@ public class SanPhamFragment extends Fragment {
         ArrayAdapter adapter = new ArrayAdapter(getContext(), android.R.layout.simple_list_item_1, lst);
         spChonLoaiSanPham.setAdapter(adapter);
     }
-
+//
 
     public void reload() {
         sanPhamDAO = new SanPhamDAO(getContext());
