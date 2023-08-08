@@ -1,0 +1,111 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="400dp"
+    android:orientation="horizontal">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+
+        android:background="@drawable/bkgxanh">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="360dp"
+            android:background="@drawable/circles"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginBottom="70dp"
+                android:background="@drawable/profile" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtHovaTen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="hovaten"
+                android:gravity="center"
+                android:textSize="24dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/txtUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="username"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                android:textStyle="italic"/>
+
+            <TextView
+                android:id="@+id/txtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="matkhau"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                android:textStyle="italic"/>
+
+            <TextView
+                android:id="@+id/txtSoDienThoai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SDT"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                android:textStyle="italic"/>
+
+            <TextView
+                android:id="@+id/txtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="email"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                android:textStyle="italic"/>
+
+
+            <TextView
+                android:id="@+id/txtDiaChi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="diachi"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                android:textStyle="italic"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/btnSuaKhachHang"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/networking" />
+            <ImageView
+                android:id="@+id/btnXoaKhachHang"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/deletehuman" />
+        </LinearLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</LinearLayout>

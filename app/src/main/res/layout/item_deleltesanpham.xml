@@ -8,7 +8,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Thông báo"
+        android:text="Thông báo!!"
         android:textSize="19dp"
         android:textColor="@color/black"
         android:textStyle="bold"/>
@@ -22,7 +22,7 @@
         android:layout_marginTop="10dp"/>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_gravity="end"
@@ -30,15 +30,19 @@
         android:layout_marginTop="15dp">
         <Button
             android:id="@+id/btnDiaLogHuyXoaSanPham"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:background="@drawable/btnbkg"
             android:text="Không"/>
 
         <Button
             android:id="@+id/btnDiaLogXoaSanPham"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="Có"
+            android:background="@drawable/btnbkg"
             android:layout_marginLeft="10dp"/>
     </LinearLayout>
 

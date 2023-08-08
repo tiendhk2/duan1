@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bkgintro"
+    android:orientation="horizontal"
+    tools:context=".manhinhchao2Activity">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:text="Welcome"
+        android:textColor="@color/white"
+        android:textSize="55dp" />
+
+    <ImageView
+        android:layout_width="400dp"
+        android:layout_height="300dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/logihambergo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+      <Button
+          android:id="@+id/btnLogin"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_margin="10dp"
+          android:background="@drawable/bkgintro1"
+          android:backgroundTint="@color/white"
+          android:elevation="3dp"
+          android:text="Login"
+          android:textColor="#f3a02b"
+          android:textSize="25dp" />
+
+      <Button
+          android:id="@+id/btnSigin"
+          android:layout_width="200dp"
+          android:layout_height="wrap_content"
+          android:layout_margin="10dp"
+          android:background="@drawable/bkgintro2"
+          android:backgroundTint="@color/white"
+          android:elevation="3dp"
+          android:text="Sigin"
+          android:textColor="@color/white"
+          android:textSize="25dp" />
+    </LinearLayout>
+
+  </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
