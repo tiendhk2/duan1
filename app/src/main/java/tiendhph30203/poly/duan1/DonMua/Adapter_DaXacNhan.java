@@ -20,12 +20,12 @@ import java.util.ArrayList;
 import tiendhph30203.poly.projectdatdoan.FragmentHoaDon.HoaDonChiTietActivity;
 import tiendhph30203.poly.projectdatdoan.R;
 
-public class Adapter_DangGiao extends RecyclerView.Adapter<Adapter_DangGiao.ViewHolder> {
+public class Adapter_DaXacNhan  extends  RecyclerView.Adapter<Adapter_DaXacNhan.ViewHolder>{
     ArrayList<HoaDon> list;
     Context context;
     private HoaDonDAO hoaDonDAO;
 
-    public Adapter_DangGiao(ArrayList<HoaDon> list, Context context, HoaDonDAO hoaDonDAO) {
+    public Adapter_DaXacNhan(ArrayList<HoaDon> list, Context context, HoaDonDAO hoaDonDAO) {
         this.list = list;
         this.context = context;
         this.hoaDonDAO = hoaDonDAO;
@@ -36,7 +36,7 @@ public class Adapter_DangGiao extends RecyclerView.Adapter<Adapter_DangGiao.View
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = ((Activity) context).getLayoutInflater();
-        View view = inflater.inflate(R.layout.item_danggiao, parent, false);
+        View view = inflater.inflate(R.layout.item_daxacnhan, parent, false);
         return new ViewHolder(view);
     }
 
@@ -57,21 +57,16 @@ public class Adapter_DangGiao extends RecyclerView.Adapter<Adapter_DangGiao.View
 
             }
         });
+
         int tinhTrang = list.get(position).getTrangthai();
-        if (tinhTrang == 0) {
+        if (tinhTrang == 1) {
             holder.txtTrangThai.setText("Trạng thái: " + "Chờ xác nhận");
             holder.btnXacNhanDonHang.setVisibility(View.VISIBLE);
-            holder.txtTrangThai.setTextColor(Color.RED);
-        } else if (tinhTrang == 1) {
-            holder.txtTrangThai.setText("Trạng thái: " + "Chờ lấy hàng");
+            holder.txtTrangThai.setTextColor(Color.YELLOW);
+        } else if (tinhTrang == 2) {
+            holder.txtTrangThai.setText("Trạng thái: " + "Đã xác nhận");
             holder.btnXacNhanDonHang.setVisibility(View.VISIBLE);
             holder.txtTrangThai.setTextColor(Color.YELLOW);
-        }
-        else if (tinhTrang == 2) {
-            holder.txtTrangThai.setText("Trạng thái: " + "Chờ lấy hàng");
-            holder.btnXacNhanDonHang.setVisibility(View.VISIBLE);
-            holder.txtTrangThai.setTextColor(Color.YELLOW);
-
         }
 
         holder.btnXacNhanDonHang.setOnClickListener(new View.OnClickListener() {
@@ -83,6 +78,7 @@ public class Adapter_DangGiao extends RecyclerView.Adapter<Adapter_DangGiao.View
             }
         });
     }
+
 
     @Override
     public int getItemCount() {
@@ -118,6 +114,9 @@ public class Adapter_DangGiao extends RecyclerView.Adapter<Adapter_DangGiao.View
                     hoaDon.setTrangthai(3);
                     hoaDonDAO.update(hoaDon);
                     list.remove(i);
+                }  else if (hoaDon.getTrangthai() == 3) {
+                    hoaDonDAO.delete(hoaDon);
+                    list.remove(i);
                 }
                 notifyDataSetChanged();
                 dialog.dismiss();
@@ -139,13 +138,13 @@ public class Adapter_DangGiao extends RecyclerView.Adapter<Adapter_DangGiao.View
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            txtMaHoaDon = itemView.findViewById(R.id.txtMaHoaDonb);
-            txtMaNguoiDung = itemView.findViewById(R.id.txtMaNguoiDungb);
-            txtTenNguoiDung = itemView.findViewById(R.id.txtTenNguoiDungb);
-            txtNgayMua = itemView.findViewById(R.id.txtNgayMuab);
-            txtTongTien = itemView.findViewById(R.id.txtTongTienb);
-            txtTrangThai = itemView.findViewById(R.id.txtTrangThaib);
-            btnXacNhanDonHang = itemView.findViewById(R.id.btnXacNhanDonHangb);
+            txtMaHoaDon = itemView.findViewById(R.id.txtMaHoaDona);
+            txtMaNguoiDung = itemView.findViewById(R.id.txtMaNguoiDunga);
+            txtTenNguoiDung = itemView.findViewById(R.id.txtTenNguoiDunga);
+            txtNgayMua = itemView.findViewById(R.id.txtNgayMuaa);
+            txtTongTien = itemView.findViewById(R.id.txtTongTiena);
+            txtTrangThai = itemView.findViewById(R.id.txtTrangThaia);
+            btnXacNhanDonHang = itemView.findViewById(R.id.btnXacNhanDonHanga);
 
 
         }

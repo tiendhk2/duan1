@@ -1,6 +1,7 @@
 package tiendhph30203.poly.duan1.DonMua;
 
 public class HoaDon {
+    private int id;
     private int mahoadon;
     private int manguoidung;
     private int masanpham;
@@ -9,6 +10,36 @@ public class HoaDon {
     private int tongtien;
     private int trangthai;
     private int soluongdamua;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public HoaDon(int id, int mahoadon, int manguoidung, int masanpham, String hoten, String ngaymua, int tongtien, int trangthai, int soluongdamua) {
+        this.id = id;
+        this.mahoadon = mahoadon;
+        this.manguoidung = manguoidung;
+        this.masanpham = masanpham;
+        this.hoten = hoten;
+        this.ngaymua = ngaymua;
+        this.tongtien = tongtien;
+        this.trangthai = trangthai;
+        this.soluongdamua = soluongdamua;
+    }
+
+    public HoaDon(int mahoadon, int manguoidung, int masanpham, String hoten, String ngaymua, int tongtien, int trangthai) {
+        this.mahoadon = mahoadon;
+        this.manguoidung = manguoidung;
+        this.masanpham = masanpham;
+        this.hoten = hoten;
+        this.ngaymua = ngaymua;
+        this.tongtien = tongtien;
+        this.trangthai = trangthai;
+    }
 
     public HoaDon() {
     }

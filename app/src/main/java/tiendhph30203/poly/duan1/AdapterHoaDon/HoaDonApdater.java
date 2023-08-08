@@ -5,7 +5,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
+import tiendhph30203.poly.projectdatdoan.FragmentHoaDon.ChoXacNhanFragment;
 import tiendhph30203.poly.projectdatdoan.FragmentHoaDon.DaGiaoFragment;
+import tiendhph30203.poly.projectdatdoan.FragmentHoaDon.DaXacNhanFragment;
 import tiendhph30203.poly.projectdatdoan.FragmentHoaDon.DangGiaoFragment;
 
 public class HoaDonApdater extends FragmentStateAdapter {
@@ -18,8 +20,15 @@ public class HoaDonApdater extends FragmentStateAdapter {
     @NonNull
     @Override
     public Fragment createFragment(int position) {
-        if (position == 0) {
-            return new DangGiaoFragment();
+        switch (position) {
+            case 0:
+                return new ChoXacNhanFragment();
+            case 1:
+                return new DaXacNhanFragment();
+            case 2:
+                return new DangGiaoFragment();
+            case 3:
+                return new DaGiaoFragment();
         }
         return new DaGiaoFragment();
     }
@@ -27,6 +36,6 @@ public class HoaDonApdater extends FragmentStateAdapter {
 
     @Override
     public int getItemCount() {
-        return 2;
+        return 4;
     }
 }

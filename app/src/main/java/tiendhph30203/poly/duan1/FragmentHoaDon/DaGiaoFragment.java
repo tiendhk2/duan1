@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-import tiendhph30203.poly.projectdatdoan.DonMua.Adapter_DaGiao;
+import tiendhph30203.poly.projectdatdoan.DonMua.Adapter_DaGiaoCuaKhachHang;
 import tiendhph30203.poly.projectdatdoan.DonMua.Adapter_DangGiao;
 import tiendhph30203.poly.projectdatdoan.DonMua.HoaDon;
 import tiendhph30203.poly.projectdatdoan.DonMua.HoaDonDAO;
@@ -28,6 +28,7 @@ public class DaGiaoFragment extends Fragment {
     private RecyclerView recyclerViewDonMua;
     HoaDonDAO qlhd;
     ArrayList<HoaDon> list = new ArrayList<>();
+    private int trangthai;
 
 
     public DaGiaoFragment() {
@@ -40,41 +41,30 @@ public class DaGiaoFragment extends Fragment {
 
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        loadData1();
+    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.dagiao_fragment, container, false);
         recycleViewDaGiao = view.findViewById(R.id.recycleViewDaGiao);
+        loadData1();
         return view;
     }
 
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        loadData(1);
-
-
-    }
-
-
-
-    private void loadData (int id) {
+    public void loadData1() {
+        ArrayList<HoaDon> list = new ArrayList<>();
         qlhd = new HoaDonDAO(getContext());
-        ArrayList<HoaDon> listDXN = null;
-        if (id == 1) {
-            ArrayList<HoaDon> list = (ArrayList<HoaDon>) qlhd.getAll();
-            listDXN = new ArrayList<>();
-            for (int i = 0; i < list.size(); i++) {
-                if (list.get(i).getTrangthai() == 1) {
-                    listDXN.add(list.get(i));
-                }
-            }
-        }
+        list = (ArrayList<HoaDon>) qlhd.getTrangThai3();
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recycleViewDaGiao.setLayoutManager(linearLayoutManager);
-        Adapter_DaGiao adapterDaGiao = new Adapter_DaGiao(listDXN, getContext(), hoaDonDAO);
+        Adapter_DaGiaoCuaKhachHang adapterDaGiao = new Adapter_DaGiaoCuaKhachHang(list, getContext(),qlhd);
         recycleViewDaGiao.setAdapter(adapterDaGiao);
-
     }
+
 }
 
