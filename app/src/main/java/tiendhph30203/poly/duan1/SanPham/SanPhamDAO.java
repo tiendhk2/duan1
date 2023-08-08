@@ -1,5 +1,6 @@
 package tiendhph30203.poly.duan1.SanPham;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -8,8 +9,7 @@ import android.database.sqlite.SQLiteDatabase;
 import java.util.ArrayList;
 import java.util.List;
 
-import tiendhph30203.poly.duan1.Database.Database;
-
+import tiendhph30203.poly.projectdatdoan.Database.Database;
 
 public class SanPhamDAO {
 
@@ -37,6 +37,17 @@ public class SanPhamDAO {
         values.put("hansudung", sanPham.getHansudung());
         return db.insert("sanpham", null, values);
     }
+    public long addRating(float rating) {
+        ContentValues values = new ContentValues();
+        values.put("danhgia", rating);
+        long id = db.insert("danhgia", null, values);
+        return id;
+    }
+
+    public Cursor getAllRatings() {
+
+        return db.query("danhgia", null, null, null, null, null, null);
+    }
 
     public int update(SanPham sanPham) {
         ContentValues values = new ContentValues();
@@ -51,6 +62,7 @@ public class SanPhamDAO {
         values.put("hansudung", sanPham.getHansudung());
         return db.update("sanpham", values, "masanpham=?", new String[]{String.valueOf(sanPham.getMasanpham())});
     }
+
 
 
 
@@ -160,6 +172,71 @@ public class SanPhamDAO {
 //
 //        return list;
 //    }
+@SuppressLint("Range")
+public ArrayList<SanPham> TimKiemSanPham(String ten) {
+    Database database = new Database(context);
+    SQLiteDatabase sqLite = database.getWritableDatabase();
+    ArrayList<SanPham> list = new ArrayList<>();
+
+    Cursor cursor = sqLite.rawQuery("SELECT  * FROM sanpham  WHERE tensanpham LIKE '%" + ten + "%' ", null);
+    if (cursor.getCount() > 0) {
+        cursor.moveToFirst();
+        do {
+            SanPham sanPham = new SanPham();
+            sanPham.setMasanpham(Integer.parseInt(cursor.getString(cursor.getColumnIndex("masanpham"))));
+            sanPham.setAnhsanpham(String.valueOf(cursor.getColumnIndex("anhsanpham")));
+            sanPham.setLinkanhsanpham(cursor.getString(cursor.getColumnIndex("linkanhsanpham")));
+            sanPham.setTensanpham(cursor.getString(cursor.getColumnIndex("tensanpham")));
+            sanPham.setGiasanpham(cursor.getString(cursor.getColumnIndex("giasanpham")));
+            sanPham.setGiamgia(cursor.getString(cursor.getColumnIndex("giamgia")));
+            sanPham.setSoluongtrongkho(Integer.parseInt(cursor.getString(cursor.getColumnIndex("soluongtrongkho"))));
+            sanPham.setMaloai(Integer.parseInt(cursor.getString(cursor.getColumnIndex("maloai"))));
+            sanPham.setNgaysanxuat(cursor.getString(cursor.getColumnIndex("ngaysanxuat")));
+            sanPham.setHansudung(cursor.getString(cursor.getColumnIndex("hansudung")));
+            list.add(sanPham);
+
+        }
+        while (cursor.moveToNext());
+    }
+    return list;
+}
+
+
+    @SuppressLint("Range")
+    public ArrayList<SanPham> LocSanPham(int maloai) {
+        Database database = new Database(context);
+        SQLiteDatabase sqLite = database.getWritableDatabase();
+        ArrayList<SanPham> list = new ArrayList<>();
+        Cursor cursor = sqLite.rawQuery("SELECT  * FROM sanpham  WHERE maloai LIKE '%" + maloai + "%' ", null);
+        if (cursor.getCount() > 0) {
+            cursor.moveToFirst();
+            do {
+                SanPham sanPham = new SanPham();
+                sanPham.setMasanpham(Integer.parseInt(cursor.getString(cursor.getColumnIndex("masanpham"))));
+                sanPham.setAnhsanpham(String.valueOf(cursor.getColumnIndex("anhsanpham")));
+                sanPham.setLinkanhsanpham(cursor.getString(cursor.getColumnIndex("linkanhsanpham")));
+                sanPham.setTensanpham(cursor.getString(cursor.getColumnIndex("tensanpham")));
+                sanPham.setGiasanpham(cursor.getString(cursor.getColumnIndex("giasanpham")));
+                sanPham.setGiamgia(cursor.getString(cursor.getColumnIndex("giamgia")));
+                sanPham.setSoluongtrongkho(Integer.parseInt(cursor.getString(cursor.getColumnIndex("soluongtrongkho"))));
+                sanPham.setMaloai(Integer.parseInt(cursor.getString(cursor.getColumnIndex("maloai"))));
+                sanPham.setNgaysanxuat(cursor.getString(cursor.getColumnIndex("ngaysanxuat")));
+                sanPham.setHansudung(cursor.getString(cursor.getColumnIndex("hansudung")));
+                list.add(sanPham);
+
+            }
+            while (cursor.moveToNext());
+        }
+        return list;
+    }
+
+    //get data theo id
+    public SanPham getID(String id){
+        String sql="SELECT * FROM sanpham WHERE masanpham=?";
+        List<SanPham> list =getData(sql,id);
+        return list.get(0);
+    }
+
 
 
 

@@ -19,10 +19,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
-import tiendhph30203.poly.duan1.R;
 import tiendhph30203.poly.projectdatdoan.LoaiSanPham.LoaiSanPham;
 import tiendhph30203.poly.projectdatdoan.LoaiSanPham.LoaiSanPhamDAO;
 import tiendhph30203.poly.projectdatdoan.R;
@@ -94,23 +96,147 @@ public class SanPhamFragment extends Fragment {
                 btnDialogThemSanPham.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+
+
+                        String tenSanPham = edtThemTenSanPham.getText().toString().trim();
+                        String anhSanPham = edtThemAnhSanPham.getText().toString().trim();
+                        String giaSanPham = edtThemGiaSanPham.getText().toString().trim();
+                        String soLuongTrongKho = edtThemSoLuongTrongKho.getText().toString().trim();
+                        String ngaySanXuat = edtThemNgaySanXuat.getText().toString().trim();
+                        String hanSuDung = edtThemHanSuDung.getText().toString().trim();
+                        String linkAnhSanPham = edtThemLinkAnhSanPham.getText().toString().trim();
+                        String giamgia = edtThemGiamGia.getText().toString().trim();
+
+                        // Kiểm tra tên sản phẩm
+                        if (tenSanPham.isEmpty()) {
+                            edtThemTenSanPham.setError("Tên sản phẩm không được để trống");
+                            return;
+                        } else if (!tenSanPham.equals(tenSanPham.toUpperCase())) {
+                            edtThemTenSanPham.setError("Tên sản phẩm phải viết hoa");
+                            return;
+                        }
+
+                        // Kiểm tra  ảnh sản phẩm
+                        if (anhSanPham.isEmpty()) {
+                            edtThemAnhSanPham.setError("Ảnh sản phẩm không được để trống");
+
+                            return;
+                        }
+                        // Kiểm tra link ảnh sản phẩm
+                        if (linkAnhSanPham.isEmpty()) {
+                            edtThemLinkAnhSanPham.setError("Link ảnh sản phẩm không được để trống");
+                            return;
+                        }
+
+
+                        // Kiểm tra giá sản phẩm
+                        if (giaSanPham.isEmpty()) {
+                            edtThemGiaSanPham.setError("Giá sản phẩm không được để trống");
+                            return;
+                        } else {
+                            try {
+                                double gia = Double.parseDouble(giaSanPham);
+                                if (gia <= 0) {
+                                    edtThemGiaSanPham.setError("Giá sản phẩm phải lớn hơn 0");
+                                    return;
+                                }
+                            } catch (NumberFormatException e) {
+                                edtThemGiaSanPham.setError("Giá sản phẩm phải là số");
+                                return;
+                            }
+                        }
+
+                        // Kiểm tra giảm giá
+                        if (giamgia.isEmpty()) {
+                            edtThemGiamGia.setError("Giảm giá sản phẩm không được để trống");
+                            return;
+                        } else {
+                            try {
+                                double gia = Double.parseDouble(giamgia);
+                                if (gia < 0) {
+                                    edtThemGiamGia.setError("Giảm giá sản phẩm không được âm");
+                                    return;
+                                }
+                            } catch (NumberFormatException e) {
+                                edtThemGiamGia.setError("Giảm giá sản phẩm phải là số");
+                                return;
+                            }
+                        }
+
+                        // Kiểm tra số lượng trong kho
+                        if (soLuongTrongKho.isEmpty()) {
+                            edtThemSoLuongTrongKho.setError("Số lượng trong kho không được để trống");
+                            return;
+                        } else {
+                            try {
+                                int soLuong = Integer.parseInt(soLuongTrongKho);
+                                if (soLuong <= 0) {
+                                    edtThemSoLuongTrongKho.setError("Số lượng trong kho không được âm");
+                                    return;
+                                }
+                            } catch (NumberFormatException e) {
+                                edtThemSoLuongTrongKho.setError("Số lượng trong kho phải là số");
+                                return;
+                            }
+                        }
+
+                        // Kiểm tra ngày sản xuất
+                        if (ngaySanXuat.isEmpty()) {
+                            edtThemNgaySanXuat.setError("Ngày sản xuất không được để trống");
+                            return;
+                        } else {
+                            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+                            sdf.setLenient(false);
+                            try {
+                                sdf.parse(ngaySanXuat);
+                            } catch (ParseException e) {
+
+                                edtThemNgaySanXuat.setError("Định dạng ngày tháng không hợp lệ (dd/MM/yyyy)");
+                                return;
+                            }
+                        }
+
+                        // Kiểm tra hạn sử dụng
+                        if (hanSuDung.isEmpty()) {
+                            edtThemHanSuDung.setError("Hạn sử dụng không được để trống");
+
+                            return;
+                        } else {
+                            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+                            sdf.setLenient(false);
+                            try {
+                                Date ngaySanXuatDate = sdf.parse(ngaySanXuat);
+                                Date hanSuDungDate = sdf.parse(hanSuDung);
+                                if (hanSuDungDate.before(ngaySanXuatDate)) {
+
+                                    edtThemHanSuDung.setError("Hạn sử dụng phải sau ngày sản xuất");
+                                    return;
+                                }
+                            } catch (ParseException e) {
+                                edtThemHanSuDung.setError("Định dạng ngày tháng không hợp lệ (dd/MM/yyyy)");
+                                return;
+                            }
+                        }
+
+
                         SanPham sanPham = new SanPham();
-                        sanPham.setTensanpham(edtThemTenSanPham.getText().toString());
-                        sanPham.setAnhsanpham(edtThemAnhSanPham.getText().toString());
-                        sanPham.setLinkanhsanpham(edtThemLinkAnhSanPham.getText().toString());
-                        sanPham.setGiasanpham(edtThemGiaSanPham.getText().toString());
-                        sanPham.setGiamgia(edtThemGiamGia.getText().toString());
-                        sanPham.setSoluongtrongkho(Integer.parseInt(edtThemSoLuongTrongKho.getText().toString()));
-                        sanPham.setNgaysanxuat(edtThemNgaySanXuat.getText().toString());
-                        sanPham.setHansudung(edtThemHanSuDung.getText().toString());
-                        for (LoaiSanPham loaiSanPham: list) {
-                            if(loaiSanPham.getTenLoaiSanPham().equals(spChonLoaiSanPham.getSelectedItem().toString())){
+                        sanPham.setAnhsanpham(anhSanPham);
+                        sanPham.setTensanpham(tenSanPham);
+                        sanPham.setAnhsanpham(linkAnhSanPham);
+                        sanPham.setLinkanhsanpham(linkAnhSanPham);
+                        sanPham.setGiasanpham(giaSanPham);
+                        sanPham.setGiamgia(giamgia);
+                        sanPham.setSoluongtrongkho(Integer.parseInt(soLuongTrongKho));
+                        sanPham.setNgaysanxuat(ngaySanXuat);
+                        sanPham.setHansudung(hanSuDung);
+                        for (LoaiSanPham loaiSanPham : list) {
+                            if (loaiSanPham.getTenLoaiSanPham().equals(spChonLoaiSanPham.getSelectedItem().toString())) {
                                 sanPham.setMaloai(loaiSanPham.getMaLoaiSanPham());
                             }
                         }
-                        if(sanPhamDAO.insert(sanPham) > 0){
+                        if (sanPhamDAO.insert(sanPham) > 0) {
                             Toast.makeText(getContext(), "Thêm thành công", Toast.LENGTH_SHORT).show();
-                        }else{
+                        } else {
                             Toast.makeText(getContext(), "Thêm thất bại", Toast.LENGTH_SHORT).show();
                         }
                         dialog.dismiss();
@@ -123,7 +249,7 @@ public class SanPhamFragment extends Fragment {
 //                            } else {
 //                                Toast.makeText(getContext(), "Thêm thất bại", Toast.LENGTH_SHORT).show();
 //                            }
-                            dialog.dismiss();
+                        dialog.dismiss();
 
                     }
                 });
@@ -134,11 +260,11 @@ public class SanPhamFragment extends Fragment {
         return view;
     }
 
-    private void spChonLoai(){
+    private void spChonLoai() {
         LoaiSanPhamDAO loaiSanPhamDAO1 = new LoaiSanPhamDAO(getContext());
         List<String> lst = new ArrayList<>();
         List<LoaiSanPham> list = (ArrayList<LoaiSanPham>) loaiSanPhamDAO1.getAll();
-        for (LoaiSanPham loaiSanPham: list) {
+        for (LoaiSanPham loaiSanPham : list) {
             lst.add(loaiSanPham.getTenLoaiSanPham());
         }
         ArrayAdapter adapter = new ArrayAdapter(getContext(), android.R.layout.simple_list_item_1, lst);

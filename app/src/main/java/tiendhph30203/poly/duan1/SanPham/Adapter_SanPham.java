@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,8 +22,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-import tiendhph30203.poly.duan1.R;
-
+import tiendhph30203.poly.projectdatdoan.LoaiSanPham.LoaiSanPham;
+import tiendhph30203.poly.projectdatdoan.LoaiSanPham.LoaiSanPhamDAO;
+import tiendhph30203.poly.projectdatdoan.R;
 
 public class Adapter_SanPham extends RecyclerView.Adapter<Adapter_SanPham.ViewHolder> {
 
@@ -68,7 +69,7 @@ public class Adapter_SanPham extends RecyclerView.Adapter<Adapter_SanPham.ViewHo
         }
         holder.txtLoaiSanPham.setText(tenLoaiSanPham);
         holder.txtTenSanPham.setText(list.get(position).getTensanpham());
-        holder.txtAnhSanPham.setText(list.get(position).getAnhsanpham());
+       // holder.txtAnhSanPham.setText(list.get(position).getAnhsanpham());
         holder.txtLinkAnhSanPham.setText(list.get(position).getLinkanhsanpham());
         holder.txtGiaSanPham.setText(list.get(position).getGiasanpham());
         holder.txtGiamGia.setText(list.get(position).getGiamgia());
@@ -220,9 +221,10 @@ public class Adapter_SanPham extends RecyclerView.Adapter<Adapter_SanPham.ViewHo
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView txtLoaiSanPham, txtTenSanPham, txtAnhSanPham, txtLinkAnhSanPham,
+        TextView txtLoaiSanPham, txtTenSanPham, txtLinkAnhSanPham,
                 txtGiaSanPham, txtGiamGia, txtSoLuongTrongKho, txtNgaySanXuat, txtHanSuDung;
-        ImageButton ibUpdateSanPham, ibDeleteSanPham;
+
+        ImageView ibUpdateSanPham, ibDeleteSanPham,txtAnhSanPham;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
