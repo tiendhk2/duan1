@@ -22,8 +22,9 @@
                 android:id="@+id/Toobar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="#aeeee9"
-                app:titleTextColor="#9A1F1F" />
+                android:background="@color/hongnhat"
+                app:titleTextColor="#9A1F1F"
+                />
 
 
         </com.google.android.material.appbar.AppBarLayout>
@@ -43,10 +44,27 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start"
+        app:itemTextColor="#FF5722"
+        android:clickable="true"
+        android:background="@drawable/bordeer_nav_drawer"
+        app:itemBackground="@drawable/item_seleted"
         app:headerLayout="@layout/layout_nav"
         app:menu="@menu/menu_nav">
 
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/background_3d"
+            android:alpha="0.3"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_trang_tri"
+            android:layout_marginTop="-600dp"
+            android:layout_marginLeft="-200dp"
+            android:alpha="0.3"/>
     </com.google.android.material.navigation.NavigationView>
 
 </androidx.drawerlayout.widget.DrawerLayout>

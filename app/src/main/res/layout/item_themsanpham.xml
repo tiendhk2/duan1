@@ -5,15 +5,6 @@
     android:orientation="vertical"
     android:padding="15dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="THÊM SẢN PHẨM"
-        android:textSize="20dp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -34,70 +25,90 @@
     <EditText
         android:id="@+id/edtThemTenSanPham"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="55dp"
+        android:background="@drawable/edittextvienhong"
+        android:layout_margin="5dp"
         android:hint="Nhập tên sản phẩm"
         android:layout_marginTop="15dp"/>
     <EditText
         android:id="@+id/edtThemAnhSanPham"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="55dp"
+        android:background="@drawable/edittextvienhong"
+        android:layout_margin="5dp"
         android:hint="Nhập ảnh sản phẩm"
         android:layout_marginTop="15dp"/>
     <EditText
     android:id="@+id/edtThemLinkAnhSanPham"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+        android:layout_height="55dp"
+        android:background="@drawable/edittextvienhong"
+        android:layout_margin="5dp"
     android:hint="Nhập link ảnh sản phẩm"
     android:layout_marginTop="15dp"/>
     <EditText
         android:id="@+id/edtThemGiaSanPham"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="55dp"
+        android:background="@drawable/edittextvienhong"
+        android:layout_margin="5dp"
         android:hint="Nhập giá sản phẩm"
         android:layout_marginTop="15dp"/>
     <EditText
         android:id="@+id/edtThemGiamGia"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="55dp"
+        android:background="@drawable/edittextvienhong"
+        android:layout_margin="5dp"
         android:hint="Nhập giảm giá"
         android:layout_marginTop="15dp"/>
     <EditText
         android:id="@+id/edtThemSoLuongTrongKho"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="55dp"
+        android:background="@drawable/edittextvienhong"
+        android:layout_margin="5dp"
         android:hint="Nhập số lượng trong kho"
         android:layout_marginTop="15dp"/>
     <EditText
         android:id="@+id/edtThemNgaySanXuat"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="55dp"
+        android:background="@drawable/edittextvienhong"
+        android:layout_margin="5dp"
         android:hint="Nhập ngày sản xuất"
         android:layout_marginTop="15dp"/>
 
     <EditText
         android:id="@+id/edtThemHanSuDung"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="55dp"
+        android:background="@drawable/edittextvienhong"
+        android:layout_margin="5dp"
         android:hint="Nhập hạn sử dụng"
         android:layout_marginTop="15dp"/>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_gravity="end"
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp">
         <Button
+            android:layout_weight="1"
             android:id="@+id/btnDialogHuyThemSanPham"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/edittextvienhong"
             android:text="Hủy"/>
         <Button
+            android:layout_weight="1"
             android:id="@+id/btnDialogThemSanPham"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Thêm"
+            android:background="@drawable/edittextvienhong"
             android:layout_marginLeft="15dp"/>
     </LinearLayout>
 

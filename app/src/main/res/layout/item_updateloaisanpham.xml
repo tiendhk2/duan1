@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="SỬA LOẠI SẢN PHẨM"
+        android:background="@drawable/bkgxanh"
+        android:layout_gravity="top"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/edtDialogUpdateLoaiSanPham"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/edittextvienhong"
+        android:layout_marginTop="20dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="end"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp">
+
+        <Button
+            android:id="@+id/btnDialogHuySuaLoaiSanPham"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_cam"
+            android:layout_height="wrap_content"
+            android:text="Hủy"/>
+        <Button
+            android:id="@+id/btnDialogSuaLoaiSanPham"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bkgintro"
+            android:layout_height="wrap_content"
+            android:text="Sửa"
+            android:layout_marginLeft="15dp"/>
+    </LinearLayout>
+</LinearLayout>
+
+
+
+</LinearLayout>
