@@ -13,12 +13,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-import tiendhph30203.poly.projectdatdoan.DonMua.Adapter_DangGiao;
+import tiendhph30203.poly.projectdatdoan.DonMua.Adapter_DaXacNhan;
 import tiendhph30203.poly.projectdatdoan.DonMua.HoaDon;
 import tiendhph30203.poly.projectdatdoan.DonMua.HoaDonDAO;
 import tiendhph30203.poly.projectdatdoan.R;
 
-public class DangGiaoFragment extends Fragment {
+public class DaXacNhanFragment extends Fragment {
+
     private RecyclerView recycleViewDangGiao;
     HoaDonDAO qlhd;
     HoaDonDAO hoaDonDAO;
@@ -27,8 +28,8 @@ public class DangGiaoFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.danggiao_fragment, container, false);
-        recycleViewDangGiao = view.findViewById(R.id.recycleViewDangGiao);
+        View view = inflater.inflate(R.layout.daxacnhan_fragment, container, false);
+        recycleViewDangGiao = view.findViewById(R.id.recycleViewDaXacNhan);
         loadData();
 
         return view;
@@ -43,10 +44,10 @@ public class DangGiaoFragment extends Fragment {
     public void loadData() {
         ArrayList<HoaDon> list = new ArrayList<>();
         qlhd = new HoaDonDAO(getContext());
-        list = (ArrayList<HoaDon>) qlhd.getTrangThai2();
+        list = (ArrayList<HoaDon>) qlhd.getTrangThai1();
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recycleViewDangGiao.setLayoutManager(linearLayoutManager);
-        Adapter_DangGiao adapter_daXacNhan = new Adapter_DangGiao(list, getContext(),qlhd);
+        Adapter_DaXacNhan adapter_daXacNhan = new Adapter_DaXacNhan(list, getContext(),qlhd);
         recycleViewDangGiao.setAdapter(adapter_daXacNhan);
     }
 

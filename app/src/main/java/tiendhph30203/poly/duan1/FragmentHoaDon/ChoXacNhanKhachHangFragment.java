@@ -13,24 +13,24 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
-import tiendhph30203.poly.projectdatdoan.DonMua.Adapter_DonMua;
+import tiendhph30203.poly.projectdatdoan.DonMua.Adapter_ChoXacNhanCuaKhachHang;
 import tiendhph30203.poly.projectdatdoan.DonMua.HoaDon;
 import tiendhph30203.poly.projectdatdoan.DonMua.HoaDonDAO;
 import tiendhph30203.poly.projectdatdoan.R;
 
-public class DonMuaFragment extends Fragment {
+public class ChoXacNhanKhachHangFragment extends Fragment {
     private RecyclerView recyclerViewDonMua;
     private FloatingActionButton btnThemDonMua;
     HoaDonDAO qlhd;
     ArrayList<HoaDon> list = new ArrayList<>();
 
-    public DonMuaFragment() {
+    public ChoXacNhanKhachHangFragment() {
 
     }
 
 
-    public static DonMuaFragment newInstance() {
-        DonMuaFragment fragment = new DonMuaFragment();
+    public static ChoXacNhanKhachHangFragment newInstance() {
+        ChoXacNhanKhachHangFragment fragment = new ChoXacNhanKhachHangFragment();
 
         return fragment;
     }
@@ -44,7 +44,7 @@ public class DonMuaFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_don_mua, container, false);
+        View view = inflater.inflate(R.layout.fragment_choxacnhankhachhang, container, false);
         recyclerViewDonMua = view.findViewById(R.id.rcDonMua);
 
 
@@ -55,10 +55,10 @@ public class DonMuaFragment extends Fragment {
 
     public void loadData() {
         qlhd = new HoaDonDAO(getContext());
-        list = (ArrayList<HoaDon>) qlhd.getAll();
+        list = (ArrayList<HoaDon>) qlhd.getTrangThai0();
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerViewDonMua.setLayoutManager(linearLayoutManager);
-        Adapter_DonMua adapterDonMua = new Adapter_DonMua(list, getContext(),qlhd);
+        Adapter_ChoXacNhanCuaKhachHang adapterDonMua = new Adapter_ChoXacNhanCuaKhachHang(list, getContext(),qlhd);
         recyclerViewDonMua.setAdapter(adapterDonMua);
     }
 }
