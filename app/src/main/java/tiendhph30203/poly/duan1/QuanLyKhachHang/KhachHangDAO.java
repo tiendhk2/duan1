@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteDatabase;
 import java.util.ArrayList;
 import java.util.List;
 
-import tiendhph30203.poly.projectdatdoan.Database.Database;
+import tiendhph30203.poly.duan1.Database.Database;
 
 public class KhachHangDAO {
     Database database;
@@ -146,35 +146,5 @@ public class KhachHangDAO {
             return 0;
         return 1;
     }
-
-    public int checkSoDienThoai(String soDienThoai) {
-        Cursor cursor = db.rawQuery("SELECT * FROM nguoidung WHERE sodienthoai = ?", new String[]{String.valueOf(soDienThoai)});
-        if (cursor.getCount() != 0) {
-            return -1;
-        }
-        return 1;
-    }
-
-    public int checkUserName(String userName) {
-
-        Cursor cursor = db.rawQuery("SELECT * FROM nguoidung WHERE username = ?", new String[]{String.valueOf(userName)});
-        if (cursor.getCount() != 0) {
-            return -1;
-        }
-        return 1;
-
-    }
-
-
-    public int checkGmail(String gmail) {
-
-        Cursor cursor = db.rawQuery("SELECT * FROM nguoidung WHERE email = ?", new String[]{String.valueOf(gmail)});
-        if (cursor.getCount() != 0) {
-            return -1;
-        }
-        return 1;
-
-    }
-
 
 }
