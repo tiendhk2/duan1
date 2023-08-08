@@ -17,7 +17,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
-import tiendhph30203.poly.projectdatdoan.R;
+import tiendhph30203.poly.duan1.R;
 
 
 public class QuanLyKhachHangFragment extends Fragment {
