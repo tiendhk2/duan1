@@ -3,18 +3,19 @@ plugins {
 }
 
 android {
-    namespace 'tiendhph30203.poly.duan1'
-    compileSdk 33
+    namespace 'tiendhph30203.poly.projectdatdoan'
+    compileSdk 34
 
     defaultConfig {
-        applicationId "tiendhph30203.poly.duan1"
+        applicationId "tiendhph30203.poly.projectdatdoan"
         minSdk 24
-        targetSdk 33
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
 
     buildTypes {
         release {
@@ -29,9 +30,9 @@ android {
 }
 
 dependencies {
-
+    implementation 'com.github.denzcoskun:ImageSlideshow:0.1.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
