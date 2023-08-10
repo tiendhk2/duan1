@@ -14,7 +14,7 @@ import androidx.fragment.app.Fragment;
 
 import java.util.Calendar;
 
-import tiendhph30203.poly.duan1.R;
+import tiendhph30203.poly.projectdatdoan.R;
 
 /**
  * A simple {@link Fragment} subclass.

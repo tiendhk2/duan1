@@ -7,6 +7,8 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import tiendhph30203.poly.projectdatdoan.R;
+
 public class manhinhchao2Activity extends AppCompatActivity {
 
 

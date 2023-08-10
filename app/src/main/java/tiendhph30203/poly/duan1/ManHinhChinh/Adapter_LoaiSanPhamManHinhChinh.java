@@ -13,10 +13,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-import tiendhph30203.poly.projectdatdoan.LoaiSanPham.LoaiSanPham;
-import tiendhph30203.poly.projectdatdoan.LoaiSanPham.LoaiSanPhamDAO;
+import tiendhph30203.poly.duan1.LoaiSanPham.LoaiSanPham;
+import tiendhph30203.poly.duan1.LoaiSanPham.LoaiSanPhamDAO;
 import tiendhph30203.poly.projectdatdoan.R;
-import tiendhph30203.poly.projectdatdoan.SanPham.SanPhamDAO;
+import tiendhph30203.poly.duan1.SanPham.SanPhamDAO;
 
 public class Adapter_LoaiSanPhamManHinhChinh extends RecyclerView.Adapter<Adapter_LoaiSanPhamManHinhChinh.ViewHolder> {
 

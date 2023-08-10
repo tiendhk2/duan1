@@ -5,10 +5,10 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import tiendhph30203.poly.projectdatdoan.FragmentHoaDon.ChoXacNhanKhachHangFragment;
-import tiendhph30203.poly.projectdatdoan.FragmentHoaDon.DaGiaoKhachHangFragment;
-import tiendhph30203.poly.projectdatdoan.FragmentHoaDon.DaXacNhanKhachHangFragment;
-import tiendhph30203.poly.projectdatdoan.FragmentHoaDon.DangGiaoKhachHangFragment;
+import tiendhph30203.poly.duan1.FragmentHoaDon.ChoXacNhanKhachHangFragment;
+import tiendhph30203.poly.duan1.FragmentHoaDon.DaGiaoKhachHangFragment;
+import tiendhph30203.poly.duan1.FragmentHoaDon.DaXacNhanKhachHangFragment;
+import tiendhph30203.poly.duan1.FragmentHoaDon.DangGiaoKhachHangFragment;
 
 public class DonMuaAdapter extends FragmentStateAdapter {
     public DonMuaAdapter(@NonNull FragmentActivity fragmentActivity) {

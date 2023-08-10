@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import tiendhph30203.poly.projectdatdoan.R;
+
 public class manhinhchaoActivity extends AppCompatActivity {
 
     ImageView ivBbkg;

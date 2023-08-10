@@ -27,14 +27,14 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import tiendhph30203.poly.projectdatdoan.DonMua.BottomSheetDialogXacNhanHoaDon;
-import tiendhph30203.poly.projectdatdoan.DonMua.GioHang;
-import tiendhph30203.poly.projectdatdoan.DonMua.GioHangDAO2;
-import tiendhph30203.poly.projectdatdoan.DonMua.HoaDonChiTietDAO;
-import tiendhph30203.poly.projectdatdoan.DonMua.HoaDonDAO;
-import tiendhph30203.poly.projectdatdoan.DonMua.Order;
-import tiendhph30203.poly.projectdatdoan.QuanLyKhachHang.KhachHang;
-import tiendhph30203.poly.projectdatdoan.QuanLyKhachHang.KhachHangDAO;
+import tiendhph30203.poly.duan1.DonMua.BottomSheetDialogXacNhanHoaDon;
+import tiendhph30203.poly.duan1.DonMua.GioHang;
+import tiendhph30203.poly.duan1.DonMua.GioHangDAO2;
+import tiendhph30203.poly.duan1.DonMua.HoaDonChiTietDAO;
+import tiendhph30203.poly.duan1.DonMua.HoaDonDAO;
+import tiendhph30203.poly.duan1.DonMua.Order;
+import tiendhph30203.poly.duan1.QuanLyKhachHang.KhachHang;
+import tiendhph30203.poly.duan1.QuanLyKhachHang.KhachHangDAO;
 import tiendhph30203.poly.projectdatdoan.R;
 
 public class XacNhanThongTinGioHang extends AppCompatActivity {

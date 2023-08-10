@@ -13,9 +13,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-import tiendhph30203.poly.projectdatdoan.DonMua.Adapter_DangGiao;
-import tiendhph30203.poly.projectdatdoan.DonMua.HoaDon;
-import tiendhph30203.poly.projectdatdoan.DonMua.HoaDonDAO;
+import tiendhph30203.poly.duan1.DonMua.Adapter_DangGiao;
+import tiendhph30203.poly.duan1.DonMua.HoaDon;
+import tiendhph30203.poly.duan1.DonMua.HoaDonDAO;
 import tiendhph30203.poly.projectdatdoan.R;
 
 public class DangGiaoFragment extends Fragment {

@@ -19,8 +19,9 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import tiendhph30203.poly.projectdatdoan.QuanLyKhachHang.KhachHangDAO;
-import tiendhph30203.poly.projectdatdoan.TaiKhoan.TaiKhoanDAO;
+import tiendhph30203.poly.duan1.QuanLyKhachHang.KhachHangDAO;
+import tiendhph30203.poly.duan1.TaiKhoan.TaiKhoanDAO;
+import tiendhph30203.poly.projectdatdoan.R;
 
 public class manhinhlogin extends AppCompatActivity {
     private EditText edtUser, edtPass;

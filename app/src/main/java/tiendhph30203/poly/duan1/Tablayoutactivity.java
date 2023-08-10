@@ -13,7 +13,8 @@ import androidx.viewpager2.widget.ViewPager2;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
-import tiendhph30203.poly.projectdatdoan.AdapterHoaDon.HoaDonApdater;
+import tiendhph30203.poly.duan1.AdapterHoaDon.HoaDonApdater;
+import tiendhph30203.poly.projectdatdoan.R;
 
 public class Tablayoutactivity extends Fragment {
 

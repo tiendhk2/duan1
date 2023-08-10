@@ -18,9 +18,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 import tiendhph30203.poly.projectdatdoan.R;
-import tiendhph30203.poly.projectdatdoan.SanPham.SanPham;
-import tiendhph30203.poly.projectdatdoan.SanPham.SanPhamDAO;
-import tiendhph30203.poly.projectdatdoan.showchonthongtindonhang;
+import tiendhph30203.poly.duan1.SanPham.SanPham;
+import tiendhph30203.poly.duan1.SanPham.SanPhamDAO;
+import tiendhph30203.poly.duan1.showchonthongtindonhang;
 
 public class Adapter_SanPhamManHinhChinh extends RecyclerView.Adapter<Adapter_SanPhamManHinhChinh.ViewHolder>{
 

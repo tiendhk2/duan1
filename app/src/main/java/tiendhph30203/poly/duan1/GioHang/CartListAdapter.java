@@ -14,9 +14,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-import tiendhph30203.poly.projectdatdoan.DonMua.GioHang;
-import tiendhph30203.poly.projectdatdoan.DonMua.GioHangDAO2;
-import tiendhph30203.poly.projectdatdoan.Interface.ChangeNumberItemCartList;
+import tiendhph30203.poly.duan1.DonMua.GioHang;
+import tiendhph30203.poly.duan1.DonMua.GioHangDAO2;
+import tiendhph30203.poly.duan1.Interface.ChangeNumberItemCartList;
 import tiendhph30203.poly.projectdatdoan.R;
 
 public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.CartListViewHolder> {

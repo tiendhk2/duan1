@@ -15,12 +15,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-import tiendhph30203.poly.projectdatdoan.DonMua.HoaDon;
-import tiendhph30203.poly.projectdatdoan.DonMua.HoaDonChiTiet;
-import tiendhph30203.poly.projectdatdoan.DonMua.HoaDonChiTietDAO;
-import tiendhph30203.poly.projectdatdoan.DonMua.HoaDonDAO;
-import tiendhph30203.poly.projectdatdoan.QuanLyKhachHang.KhachHang;
-import tiendhph30203.poly.projectdatdoan.QuanLyKhachHang.KhachHangDAO;
+import tiendhph30203.poly.duan1.DonMua.HoaDon;
+import tiendhph30203.poly.duan1.DonMua.HoaDonChiTiet;
+import tiendhph30203.poly.duan1.DonMua.HoaDonChiTietDAO;
+import tiendhph30203.poly.duan1.DonMua.HoaDonDAO;
+import tiendhph30203.poly.duan1.QuanLyKhachHang.KhachHang;
+import tiendhph30203.poly.duan1.QuanLyKhachHang.KhachHangDAO;
 import tiendhph30203.poly.projectdatdoan.R;
 
 public class HoaDonChiTietActivity extends AppCompatActivity {

@@ -12,11 +12,11 @@ import com.google.android.material.snackbar.Snackbar;
 import java.util.ArrayList;
 import java.util.List;
 
-import tiendhph30203.poly.projectdatdoan.Database.Database;
-import tiendhph30203.poly.projectdatdoan.FragmentHoaDon.CountCart;
-import tiendhph30203.poly.projectdatdoan.Interface.ChangeNumberItemCartList;
-import tiendhph30203.poly.projectdatdoan.SanPham.SanPham;
-import tiendhph30203.poly.projectdatdoan.SanPham.SanPhamDAO;
+import tiendhph30203.poly.duan1.Database.Database;
+import tiendhph30203.poly.duan1.FragmentHoaDon.CountCart;
+import tiendhph30203.poly.duan1.Interface.ChangeNumberItemCartList;
+import tiendhph30203.poly.duan1.SanPham.SanPham;
+import tiendhph30203.poly.duan1.SanPham.SanPhamDAO;
 
 public class GioHangDAO2 {
     private SQLiteDatabase db;

@@ -34,14 +34,15 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.navigation.NavigationView;
 
-import tiendhph30203.poly.projectdatdoan.GioHang.GioHangActivity;
-import tiendhph30203.poly.projectdatdoan.LoaiSanPham.LoaiSanPhamFragment;
-import tiendhph30203.poly.projectdatdoan.ManHinhChinh.ManHinhChinhFragment;
-import tiendhph30203.poly.projectdatdoan.QuanLyKhachHang.QuanLyKhachHangFragment;
-import tiendhph30203.poly.projectdatdoan.SanPham.SanPhamFragment;
-import tiendhph30203.poly.projectdatdoan.TaiKhoan.TaiKhoanDAO;
-import tiendhph30203.poly.projectdatdoan.ThongKeDoanhThu.ThongKeDoanhThuFragment;
-import tiendhph30203.poly.projectdatdoan.ThongKeTop.ThongKeTopFragment;
+import tiendhph30203.poly.duan1.GioHang.GioHangActivity;
+import tiendhph30203.poly.duan1.LoaiSanPham.LoaiSanPhamFragment;
+import tiendhph30203.poly.duan1.ManHinhChinh.ManHinhChinhFragment;
+import tiendhph30203.poly.duan1.QuanLyKhachHang.QuanLyKhachHangFragment;
+import tiendhph30203.poly.duan1.SanPham.SanPhamFragment;
+import tiendhph30203.poly.duan1.TaiKhoan.TaiKhoanDAO;
+import tiendhph30203.poly.duan1.ThongKeDoanhThu.ThongKeDoanhThuFragment;
+import tiendhph30203.poly.duan1.ThongKeTop.ThongKeTopFragment;
+import tiendhph30203.poly.projectdatdoan.R;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawerLayout;

@@ -5,10 +5,10 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import tiendhph30203.poly.projectdatdoan.FragmentHoaDon.ChoXacNhanFragment;
-import tiendhph30203.poly.projectdatdoan.FragmentHoaDon.DaGiaoFragment;
-import tiendhph30203.poly.projectdatdoan.FragmentHoaDon.DaXacNhanFragment;
-import tiendhph30203.poly.projectdatdoan.FragmentHoaDon.DangGiaoFragment;
+import tiendhph30203.poly.duan1.FragmentHoaDon.ChoXacNhanFragment;
+import tiendhph30203.poly.duan1.FragmentHoaDon.DaGiaoFragment;
+import tiendhph30203.poly.duan1.FragmentHoaDon.DaXacNhanFragment;
+import tiendhph30203.poly.duan1.FragmentHoaDon.DangGiaoFragment;
 
 public class HoaDonApdater extends FragmentStateAdapter {
 

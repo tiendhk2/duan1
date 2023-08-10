@@ -20,14 +20,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-import tiendhph30203.poly.projectdatdoan.DonMua.GioHang;
-import tiendhph30203.poly.projectdatdoan.DonMua.GioHangDAO2;
-import tiendhph30203.poly.projectdatdoan.Interface.ChangeNumberItemCartList;
-import tiendhph30203.poly.projectdatdoan.MainActivity;
-import tiendhph30203.poly.projectdatdoan.QuanLyKhachHang.KhachHang;
-import tiendhph30203.poly.projectdatdoan.QuanLyKhachHang.KhachHangDAO;
+import tiendhph30203.poly.duan1.DonMua.GioHang;
+import tiendhph30203.poly.duan1.DonMua.GioHangDAO2;
+import tiendhph30203.poly.duan1.Interface.ChangeNumberItemCartList;
+import tiendhph30203.poly.duan1.MainActivity;
+import tiendhph30203.poly.duan1.QuanLyKhachHang.KhachHang;
+import tiendhph30203.poly.duan1.QuanLyKhachHang.KhachHangDAO;
 import tiendhph30203.poly.projectdatdoan.R;
-import tiendhph30203.poly.projectdatdoan.SanPham.Adapter_SanPham;
+import tiendhph30203.poly.duan1.SanPham.Adapter_SanPham;
 
 public class GioHangActivity extends AppCompatActivity {
     private RecyclerView rclHoaHon;

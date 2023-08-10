@@ -15,7 +15,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.snackbar.Snackbar;
 
-import tiendhph30203.poly.projectdatdoan.QuanLyKhachHang.KhachHangDAO;
+import tiendhph30203.poly.duan1.QuanLyKhachHang.KhachHangDAO;
+import tiendhph30203.poly.projectdatdoan.R;
 
 public class manhinhdangky extends AppCompatActivity {
     EditText editTextUsername, editTextPassword, editTextFullName, editTextPhoneNumber, editTextEmail, editTextAddress;

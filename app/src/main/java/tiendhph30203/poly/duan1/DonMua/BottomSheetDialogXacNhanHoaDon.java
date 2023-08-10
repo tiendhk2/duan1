@@ -24,12 +24,12 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Random;
 
-import tiendhph30203.poly.projectdatdoan.MainActivity;
-import tiendhph30203.poly.projectdatdoan.QuanLyKhachHang.KhachHang;
-import tiendhph30203.poly.projectdatdoan.QuanLyKhachHang.KhachHangDAO;
+import tiendhph30203.poly.duan1.MainActivity;
+import tiendhph30203.poly.duan1.QuanLyKhachHang.KhachHang;
+import tiendhph30203.poly.duan1.QuanLyKhachHang.KhachHangDAO;
 import tiendhph30203.poly.projectdatdoan.R;
-import tiendhph30203.poly.projectdatdoan.SanPham.SanPham;
-import tiendhph30203.poly.projectdatdoan.SanPham.SanPhamDAO;
+import tiendhph30203.poly.duan1.SanPham.SanPham;
+import tiendhph30203.poly.duan1.SanPham.SanPhamDAO;
 
 public class BottomSheetDialogXacNhanHoaDon extends BottomSheetDialogFragment {
 

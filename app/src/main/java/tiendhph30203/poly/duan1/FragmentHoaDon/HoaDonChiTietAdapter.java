@@ -12,10 +12,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-import tiendhph30203.poly.projectdatdoan.DonMua.HoaDonChiTiet;
+import tiendhph30203.poly.duan1.DonMua.HoaDonChiTiet;
 import tiendhph30203.poly.projectdatdoan.R;
-import tiendhph30203.poly.projectdatdoan.SanPham.SanPham;
-import tiendhph30203.poly.projectdatdoan.SanPham.SanPhamDAO;
+import tiendhph30203.poly.duan1.SanPham.SanPham;
+import tiendhph30203.poly.duan1.SanPham.SanPhamDAO;
 
 public class HoaDonChiTietAdapter extends RecyclerView.Adapter<HoaDonChiTietAdapter.ViewHolder> {
     private Context context;

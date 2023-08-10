@@ -25,8 +25,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import tiendhph30203.poly.projectdatdoan.LoaiSanPham.LoaiSanPham;
-import tiendhph30203.poly.projectdatdoan.LoaiSanPham.LoaiSanPhamDAO;
+import tiendhph30203.poly.duan1.LoaiSanPham.LoaiSanPham;
+import tiendhph30203.poly.duan1.LoaiSanPham.LoaiSanPhamDAO;
 import tiendhph30203.poly.projectdatdoan.R;
 
 public class SanPhamFragment extends Fragment {

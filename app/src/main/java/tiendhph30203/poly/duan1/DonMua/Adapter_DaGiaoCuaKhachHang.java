@@ -17,9 +17,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-import tiendhph30203.poly.projectdatdoan.FragmentHoaDon.HoaDonChiTietActivity;
+import tiendhph30203.poly.duan1.FragmentHoaDon.HoaDonChiTietActivity;
+
+import tiendhph30203.poly.duan1.SanPham.DanhGiaSanPham;
 import tiendhph30203.poly.projectdatdoan.R;
-import tiendhph30203.poly.projectdatdoan.SanPham.DanhGiaSanPham;
 
 public class Adapter_DaGiaoCuaKhachHang extends RecyclerView.Adapter<Adapter_DaGiaoCuaKhachHang.ViewHolder> {
     ArrayList<HoaDon> list;

@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-import tiendhph30203.poly.duan1.R;
+import tiendhph30203.poly.projectdatdoan.R;
 import tiendhph30203.poly.duan1.SanPham.SanPham;
 
 public class Adapter_Top extends RecyclerView.Adapter<Adapter_Top.ViewHolder> {

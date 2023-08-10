@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import tiendhph30203.poly.projectdatdoan.R;
 
+
 public class DanhGiaSanPham extends AppCompatActivity {
     private RatingBar ratingBar;
     SanPhamDAO sanPhamDAO;

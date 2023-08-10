@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--suppress ALL -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
     <uses-feature
         android:name="android.hardware.camera"
         android:required="false" />
@@ -15,7 +15,9 @@
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage" />
+
     <uses-permission android:name="android.permission.INTERNET" />
+
 
     <application
         android:allowBackup="true"
@@ -31,49 +33,49 @@
         <activity
             android:name="tiendhph30203.poly.duan1.SanPham.DanhGiaSanPham"
             android:exported="false"
-            tools:ignore="MissingClass" />
+            />
         <activity
-            android:name=".FragmentHoaDon.HoaDonChiTietActivity"
+            android:name="tiendhph30203.poly.duan1.FragmentHoaDon.HoaDonChiTietActivity"
             android:exported="false" />
         <activity
-            android:name=".manhinhchao2Activity"
+            android:name="tiendhph30203.poly.duan1.manhinhchao2Activity"
             android:exported="false" />
         <activity
-            android:name=".manhinhlogin"
+            android:name="tiendhph30203.poly.duan1.manhinhlogin"
             android:exported="false" />
         <activity
-            android:name=".FragmentHoaDon.DaXacNhanKhachHangFragment"
+            android:name="tiendhph30203.poly.duan1.FragmentHoaDon.DaXacNhanKhachHangFragment"
             android:exported="false" />
         <activity
-            android:name=".DonMua.BottomSheetDialogXacNhanHoaDon"
+            android:name="tiendhph30203.poly.duan1.DonMua.BottomSheetDialogXacNhanHoaDon"
             android:exported="false" />
         <activity
-            android:name=".GioHang.CartListComfirmAdapter"
+            android:name="tiendhph30203.poly.duan1.GioHang.CartListComfirmAdapter"
             android:exported="false" />
         <activity
-            android:name=".GioHang.XacNhanThongTinGioHang"
+            android:name="tiendhph30203.poly.duan1.GioHang.XacNhanThongTinGioHang"
             android:exported="false" />
         <activity
-            android:name=".GioHang.CartListAdapter"
+            android:name="tiendhph30203.poly.duan1.GioHang.CartListAdapter"
             android:exported="false" />
         <activity
-            android:name=".GioHang.GioHangActivity"
+            android:name="tiendhph30203.poly.duan1.GioHang.GioHangActivity"
             android:exported="false" />
         <activity
-            android:name=".showchonthongtindonhang"
+            android:name="tiendhph30203.poly.duan1.showchonthongtindonhang"
             android:exported="false" />
         <activity
-            android:name=".manhinhdangky"
+            android:name="tiendhph30203.poly.duan1.manhinhdangky"
             android:exported="false" />
         <activity
-            android:name=".Tablayoutactivity"
+            android:name="tiendhph30203.poly.duan1.Tablayoutactivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="tiendhph30203.poly.duan1.MainActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".manhinhchaoActivity"
+            android:name="tiendhph30203.poly.duan1.manhinhchaoActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -81,6 +83,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name="tiendhph30203.poly.duan1.manhinhchao2Activity"
+            android:exported="false"/>
     </application>
 
 </manifest>

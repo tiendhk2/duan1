@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-import tiendhph30203.poly.duan1.R;
+import tiendhph30203.poly.projectdatdoan.R;
 
 public class Adapter_QuanLyKhachHang extends RecyclerView.Adapter<Adapter_QuanLyKhachHang.ViewHolder> {
     Context context;

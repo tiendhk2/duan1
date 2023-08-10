@@ -12,7 +12,7 @@ import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 
-import tiendhph30203.poly.projectdatdoan.LoaiSanPham.LoaiSanPham;
+import tiendhph30203.poly.duan1.LoaiSanPham.LoaiSanPham;
 import tiendhph30203.poly.projectdatdoan.R;
 
 public class SapXepSpinnerSanPhamAdapter extends ArrayAdapter<LoaiSanPham> {

@@ -68,20 +68,6 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <!--            <Button-->
-            <!--                android:id="@+id/btnDangNhap"-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:layout_gravity="center"-->
-            <!--                android:layout_marginStart="32dp"-->
-            <!--                android:layout_marginTop="10dp"-->
-            <!--                android:layout_marginEnd="32dp"-->
-            <!--                android:layout_marginRight="5dp"-->
-            <!--                android:layout_marginBottom="10dp"-->
-            <!--                android:background="@drawable/btn_cam"-->
-            <!--                android:text="Đăng Nhập"-->
-            <!--                android:textColor="@color/black" />-->
-
             <Button
                 android:id="@+id/btnDangNhap"
                 android:layout_width="match_parent"
@@ -95,7 +81,7 @@
                 android:background="@drawable/btn_cam"
                 android:text="Đăng Nhập"
                 android:textColor="@color/black"
-                android:visibility="visible" />
+                 />
 
             <ProgressBar
                 android:id="@+id/progressBar"
